@@ -4,8 +4,10 @@
 package org.mozilla.fenix.components.metrics
 
 import android.content.Context
-import mozilla.components.service.glean.Glean
-import mozilla.components.service.glean.private.NoExtraKeys
+//import mozilla.components.service.glean.Glean
+//import mozilla.components.service.glean.private.NoExtraKeys
+import mozilla.telemetry.glean.Glean
+import mozilla.telemetry.glean.private.NoExtraKeys
 import mozilla.components.support.utils.Browsers
 import org.mozilla.fenix.GleanMetrics.BookmarksManagement
 import org.mozilla.fenix.GleanMetrics.ContextMenu
@@ -63,7 +65,8 @@ private val Event.wrapper
         )
         is Event.PerformedSearch -> EventWrapper(
             {
-                Metrics.searchCount[this.eventSource.countLabel].add(1)
+                // FIXME: DIsabled unsupported metric type
+                // Metrics.searchCount[this.eventSource.countLabel].add(1)
                 Events.performedSearch.record(it)
             },
             { Events.performedSearchKeys.valueOf(it) }
