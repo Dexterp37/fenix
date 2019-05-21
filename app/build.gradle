@@ -415,6 +415,8 @@ task printGeckoviewVersions {
     }
 }
 
+ext.gleanNamespace = "mozilla.telemetry.glean"
 // Normally this should use the same version as the glean dependency. But since we are currently using AC snapshots we
 // can't reference a git tag with a specific version here. So we are just using "master" and hoping for the best.
-apply from: 'https://github.com/mozilla-mobile/android-components/raw/master/components/service/glean/scripts/sdk_generator.gradle'
+//apply from: 'https://github.com/mozilla-mobile/android-components/raw/master/components/service/glean/scripts/sdk_generator.gradle'
+apply from: 'https://raw.githubusercontent.com/mozilla/glean/master/glean-core/android/sdk_generator.gradle'
