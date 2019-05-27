@@ -117,7 +117,8 @@ object Deps {
 
     const val mozilla_service_firefox_accounts = "org.mozilla.components:service-firefox-accounts:${Versions.mozilla_android_components}"
     const val mozilla_service_fretboard = "org.mozilla.components:service-fretboard:${Versions.mozilla_android_components}"
-    const val mozilla_service_glean = "org.mozilla.components:service-glean:${Versions.mozilla_android_components}"
+    // const val mozilla_service_glean = "org.mozilla.components:service-glean:${Versions.mozilla_android_components}"
+    const val mozilla_service_glean = "org.mozilla.components:service-glean:0.54.0-TESTING1"
 
     const val mozilla_ui_colors = "org.mozilla.components:ui-colors:${Versions.mozilla_android_components}"
     const val mozilla_ui_icons = "org.mozilla.components:ui-icons:${Versions.mozilla_android_components}"
